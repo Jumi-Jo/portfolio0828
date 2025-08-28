@@ -1,0 +1,1060 @@
+@charset "utf-8";
+body{
+  font-family: "Suit", sans-serif;
+  color: #333;
+}
+#wrap{
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  background-color: blanchedalmond;
+}
+.inner{
+height: 100%;
+}
+.main-slide{
+  height: 100%;
+  position: relative;
+}
+
+.content{
+  height: 100%;
+}
+.content.bg01{
+  background: url(../img/background/background01.png) no-repeat left center / auto 100%;
+}
+.content.bg02{
+  background: url(../img/background/background02.png) no-repeat left center / auto 100%;
+}
+.content.bg03{
+  background: url(../img/background/background03.png) no-repeat right center / auto 100%;
+}
+
+
+.main-control{
+  position: fixed;
+  top: 2px;
+  left: 1800px;
+  width: 100px;
+  height: 100%;
+  z-index: 99;
+}
+
+.main-control .swiper-button-prev{
+  width: 100px;
+  height: 50px;
+  top: 26px;
+  left: -450px;
+}
+
+.main-control .swiper-button-next{
+  width: 100px;
+  height: 50px;
+  top: 26px;
+  left: -400px;
+}
+
+
+.main-control .swiper-pagination{
+  bottom: 100px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.main-control .swiper-pagination .swiper-pagination-bullet{
+  display: block;
+  margin-bottom: 10px;
+}
+
+.main-control .swiper-button-prev:after, 
+.main-control .swiper-container-rtl .swiper-button-next:after{
+  content: none;
+}
+.main-control .swiper-button-next:after, 
+.main-control .swiper-container-rtl .swiper-button-prev:after{
+  content: none;
+}
+.main-control .swiper-button-prev{
+  background: url(../img/background/pagination01.png) no-repeat center / contain;  
+}
+.main-control .swiper-button-next{
+  background: url(../img/background/pagination02.png) no-repeat center / contain;;
+}
+
+/*hover-arrow*/
+.hover-arrow{
+  position: fixed;
+  top: 5px;
+  left: 1250px;
+  z-index: 1000;
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
+}
+
+.back-arrow img{
+  width: 80px;
+  object-fit: contain;
+  transform:  scale(-1, -1) rotate(-60deg);
+}
+.next-arrow img{
+  position: absolute;
+  top: 0;
+  left: 240px;
+  width: 80px;
+  object-fit: contain;
+  transform: rotate(60deg);
+}
+.hover-arrow span{
+  font-family: "OngleipRyuryu" , sans-serif;
+  font-size: 4rem;
+  color: #333;
+  display: block;
+}
+.back-arrow span{
+  position: absolute;
+  top: 25px;
+  left: 0;
+}
+.next-arrow span{
+  position: absolute;
+  top: 25px;
+  left: 250px;
+}
+/*gohome*/
+.gohome{
+  position: fixed;
+  top: -72px;
+  left: 500px;
+  display: block;
+  width: 56px;
+  height: 200px;
+  z-index: 999;
+  transform: rotate(-90deg);
+}
+.gohome span{
+  position: absolute;
+  top: 20px;
+  left: -10px;
+  font-family: "Suit", sans-serif;
+  font-size: 1.6rem;
+  color: #8A4D13;
+  transform: rotate(90deg);
+  text-transform: uppercase;
+}
+
+/*content*/
+.content{
+  position: relative;
+}
+
+/*.main-cover*/
+@keyframes sun-circle{
+  0%{transform: rotate(0);}
+  100%{transform: rotate(360deg);}
+}
+@keyframes berry{
+  0%{transform: rotate(-20deg);}
+  50%{transform: rotate(20deg);}
+  100%{transform: rotate(-20deg);}
+}
+@keyframes jump{
+  0%{transform: translateY(0);}
+  30%{transform: translateY(0);}
+  70%{transform: translateY(-30px);}
+  100%{transform: translateY(0);}
+}
+.main-cover .cover-01{
+  width: 500px;
+  height: 300px;
+  position: absolute;
+  top: 100px;
+  left: 500px;
+  z-index: 200;
+}
+
+.main-cover .cover-02{
+  width: 800px;
+  height: 600px;
+  position: absolute;
+  top: 250px;
+  left: 600px;
+  z-index: 250;
+}
+.main-cover .cover-03{
+  position: absolute;
+  top: 100px;
+  left: 1300px;
+  z-index: 270;
+}
+.main-cover .sun-box{
+  width: 196px;
+  height: 80px;
+  overflow: hidden;
+  position: absolute;
+  top: 100px;
+  left: 1300px;
+  z-index: 260;
+}
+.main-cover .sun-circle{
+  animation: sun-circle 20s linear infinite;
+}
+.main-cover .cover-04{
+  position: absolute;
+  top: 700px;
+  left: 480px;
+  animation: jump 2s infinite;
+}
+.main-cover .cover-05{
+  position: absolute;
+  top: 700px;
+  left: 1400px;
+  animation: berry 2s infinite 1s;
+}
+.main-cover .cover-01 img{
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+
+}
+.main-cover .cover-02 img{
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+
+/*.aboutme*/
+
+.aboutme h1{
+  font-family: "Gangwon-Education-Saeum" , sans-serif;
+  font-size: 8rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  position: absolute;
+  top: 100px;
+  left: 600px;
+  z-index: 1002;
+}
+.aboutme .profile-top{
+  position: absolute;
+  top: 100px;
+  left: 500px;
+  display: flex;
+  gap: 20px;
+}
+
+.aboutme .profile-bg01{
+  width: 500px;
+  height: 600px;
+  background: url(../img/memo/memo01.png) no-repeat center center / contain;
+  z-index: 1001;
+}
+.aboutme .about-tit{
+  position: absolute;
+  top: 100px;
+  left: 60px;
+  width: 350px;
+  height: 80px;
+}
+.aboutme .about-tit img{
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+.aboutme .profile-text{
+  position: absolute;
+  top: 130px;
+  left: 30px;
+}
+.aboutme dl{
+  display: flex;
+  transform: rotate(-4deg);
+  align-items: center;
+}
+.aboutme dl dt{
+  font-size: 2rem;
+  text-transform: uppercase;
+}
+.aboutme dl dd{
+  font-family: "Gangwon-Education-Saeum", sans-serif;
+  font-size: 4rem;
+}
+.aboutme dl.dl01{
+  gap: 80px;
+  padding-top: 20px;
+}
+.aboutme dl.dl02{
+  width: 500px;
+}
+.aboutme dl.dl02{
+  flex-wrap: wrap;
+  column-gap: 20px
+}
+.aboutme dl.dl02 dd:last-child{
+  padding-left: 120px;
+  transform: rotate(-1deg);
+}
+.aboutme dl.dl03{
+  gap: 30px;
+  padding-top: 5px;
+}
+.aboutme dl.dl04{
+  padding-top: 30px;
+  gap: 60px;
+  align-items: normal;
+}
+.aboutme dl.dl04 dt{
+  line-height: 1.8;
+} 
+
+/*certification*/
+.aboutme .profile-bg02{
+  width: 500px;
+  height: 600px;
+}
+
+.aboutme .profile-bg02 h2{
+  font-family: "Sacheonhanggong" , sans-serif;
+  font-size: 3rem;
+  font-weight: 400;
+  color: #FF7C02;
+}
+.aboutme .profile-bg02 > ul > li{
+  padding-bottom: 20px;
+}
+.aboutme .profile-bg02 > ul > li > div{
+  display: flex;
+  gap: 20px;
+  padding-left: 10px;
+}
+.aboutme .profile-bg02 .bar-orange{
+  width: 8px;
+  height: 200px;
+  border-radius: 80px;
+  background-color: #FF7C02;
+}
+.aboutme .profile-bg02 .career-txt{
+  position: relative;
+  padding: 30px 0;
+}
+.aboutme .profile-bg02 .career-txt li{
+  margin-bottom: 30px;
+}
+.aboutme .profile-bg02 h3{
+  font-family: "Sacheonhanggong" , sans-serif;
+  font-size: 2.4rem;
+  font-weight: 400;
+  
+}
+.aboutme .profile-bg02 h3::before{
+  content: "";
+  display: block;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background-color: #FFC58E;
+  position: absolute;
+  left: -30px;
+}
+.aboutme .profile-bg02 p{
+  font-size: 1.6rem;
+  padding-top: 5px;
+}
+.aboutme .profile-bg02 p span{
+  font-family: "Sacheonhanggong" , sans-serif;
+  font-size: 2rem;
+  color: #147BF9;
+  padding-right: 10px;
+}
+.aboutme .profile-bg02 p img{
+  width: 230px;
+  object-fit: contain;
+}
+
+
+/*profile-bottom*/
+.aboutme .profile-bottom{
+  display: flex;
+  justify-content: space-between;
+  width: 1100px;
+  height: 300px;
+  position: absolute;
+  top: 650px;
+  left: 450px;
+  padding-left: 80px;
+}
+/*qrcode*/
+.aboutme .profile-bottom .qrcode{
+  width: 200px;
+  height: 200px;
+  background: url(../img/memo/qrmemo.png) no-repeat center / contain;
+  padding: 60px 0 0 40px;
+  position: relative;
+}
+.aboutme .profile-bottom .qrcode h2{
+  position: absolute;
+  top: 20px;
+  left: -30px;
+  font-family: "Sacheonhanggong" , sans-serif;
+  font-size: 4rem;
+  font-weight: 400;
+  color: #F53535;
+  transform: rotate(-20deg);
+}
+/*tools*/
+.aboutme .profile-bottom .profile-tools{
+  width: 700px;
+  height: 250px;
+  background: url(../img/memo/memo02.png) no-repeat center / contain;
+  position: relative;
+}
+.aboutme .profile-bottom .profile-tools h2{
+  font-family: "Sacheonhanggong" , sans-serif;
+  font-size: 3rem;
+  font-weight: 400;
+  color: #FF7C02;
+}
+.aboutme .profile-bottom .profile-tools .tools-list{
+  position: absolute;
+  top: 80px;
+  left: 100px;
+  width: 500px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px 10px;
+}
+.aboutme .bbangji{
+  position: absolute;
+  top: 120px;
+  left: 10px;
+  width: 300px;
+  height: 400px;
+}
+.aboutme .bbangji img{
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+.aboutme .tape{
+  position: absolute;
+  top: 20px;
+  left: 80px;
+  width: 100px;
+  height: 200px;
+}
+.aboutme .tape img{
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+.aboutme .me{
+  width: 200px;
+  position: absolute;
+  top: 60px;
+  left: 1350px;
+  transform: rotate(-10deg);
+}
+.aboutme .me img{
+  box-shadow: 5px 4px 4px 0px rgba(0,0,0,0.25);
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+.aboutme .clip{
+  width: 100px;
+  height: 120px;
+  position: absolute;
+  top: 30px;
+  left: 1450px;
+  transform: rotate(3deg);
+}
+.aboutme .clip img{
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+/*프로젝트 공통*/
+.project .font-busan{
+  font-family: "Busan" , sans-serif;
+  font-weight: normal;
+}
+.project .font-pretendard{
+  font-family: "Pretendard" , sans-serif;
+}
+.project .font-library{
+  font-family: "Library" , sans-serif;
+  font-weight: normal;
+}
+.project .font-yisunshin{
+  font-family: "Lee-Sun-sin-Dotum" , sans-serif;
+}
+.project .font-gowoon{
+  font-family: "Gowoon-Dodum" , sans-serif;
+}
+.project .font-jamsil{
+  font-family: "Daeojamjil" , sans-serif;
+}
+.project .font-esamanru{
+  font-family: "Isamanru" , sans-serif;
+}
+.project .font-giants{
+  font-family: "Giants-Inline" , sans-serif;
+}
+.project .font-inter{
+  font-family: "Inter", sans-serif;
+}
+.cont-tit{
+  width: 500px;
+  height: 140px;
+  background: url(../img/memo/memo03.png) no-repeat center / contain;
+  position: absolute;
+  top: 70px;
+  left: 1000px;
+
+}
+.cont-tit h2{
+  font-family: "Gangwon-Education-Saeum", sans-serif;
+  font-size: 6rem;
+  font-weight: normal;
+  text-transform: capitalize;
+  color: #333;
+  position: absolute;
+  top: 60px;
+  left: 80px;
+}
+.cont-tit h2 span{
+  font-family: "Gangwon-Education-Hyunok-Sam", sans-serif;
+  color: #E41E1F;
+}
+.project .project-top{
+  position: absolute;
+  top: 100px;
+  left: 500px;
+  display: flex;
+  gap: 20px;
+}
+.project .project-bg01{
+  width: 400px;
+  height: 500px;
+  background: url(../img/memo/memo04.png) no-repeat center center / contain;
+}
+.project .project-bg01 .tape{
+  position: absolute;
+  top: -50px;
+  left: 120px;
+  width: 100px;
+  height: 200px;
+}
+.project .project-bg01 .tape img{
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+.project .project-text {
+  position: absolute;
+  top: 120px;
+  left: 30px;
+  transform: rotate(-3deg);
+}
+.project .project-text ul li{
+  display: flex;
+  gap: 20px;
+  margin-bottom: 20px;
+}
+.project .project-text ul li.text01{
+  display: flex;
+}
+.project .project-text ul li h2{
+  font-size: 3rem;
+}
+.project .project-text ul li h3{
+  font-size: 2.4rem;
+  font-weight: normal;
+}
+.project .project-text ul li p{
+  text-transform: uppercase;
+  font-size: 2rem;
+  margin-bottom: 5px;
+}
+.project .project-text ul li .color-bg{
+  font-weight: 900;
+  margin-bottom: 20px;
+  position: relative;
+  font-family: "Busan" , sans-serif;
+  font-weight: normal;
+}
+.project .project-text ul li .color-bg::before{
+  content: "";
+  display: block;
+  width: 130px;
+  height: 30px;
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  opacity: 0.4;
+}
+
+/*.project-bottom*/
+.project .project-bottom{
+  width: 1100px;
+  height: 350px;
+  position: absolute;
+  top: 550px;
+  left: 450px;
+  padding-left: 40px;
+}
+
+.project .project-bottom ul.memo-list{
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+}
+.project .project-bottom ul.memo-list > li{
+  width: calc((100% - 40px) / 3);
+  height: 350px;
+  position: relative;
+}
+.project .project-bottom .project-bg03{
+  background: url(../img/memo/memo06.png) no-repeat center / contain;
+}
+.project .project-bottom .project-bg04{
+  background: url(../img/memo/memo05.png) no-repeat center / contain;
+}
+.project .project-bottom .project-bg05{
+  background: url(../img/memo/memo07.png) no-repeat center / contain;
+}
+.project .project-bottom .memo-txt{
+  position: absolute;
+  top: 70px;
+}
+.project .project-bottom .memo-txt h4{
+  font-family: "Sacheonhanggong" , sans-serif;
+  font-size: 2.8rem;
+  font-weight: normal;
+}
+.project .project-bottom .memo-txt p{
+  font-size: 2rem;
+  margin: 10px;
+}
+.project .project-bottom .memo-txt .description{
+  font-family: "Gangwon-Education-Saeum" , sans-serif;
+  font-size: 2.8rem;
+  margin-top: 30px;
+}
+.project .project-bottom .memo01{
+  transform: rotate(-5deg);
+  left: 50px;
+}
+.project .project-bottom .memo02{
+  transform: rotate(3deg);
+  left: 60px;
+}
+.project .project-bottom .memo01 .colorpen{
+  display: block;
+  width: 160px;
+  object-fit: contain;
+  position: absolute;
+  top: 40px;
+  transform: rotate(-6deg);
+}
+.project .project-bottom .memo03{
+  transform: rotate(5deg);
+  left: 60px;
+}
+
+.project .project-bottom .memo03 ul{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px 20px ;
+  width: 250px;
+}
+.project .a-box{
+  position: absolute;
+  top: 200px;
+  left: 500px;
+}
+.project .view-more{
+  display: block;
+  width: 200px;
+  position: relative;
+}
+.project .view-more img{
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+.project .view-more span{
+  display: block;
+  font-family: "Gangwon-Education-Saeum", sans-serif;
+  font-size: 3rem;
+  position: absolute;
+  top: 30px;
+  left: 15px;
+}
+
+
+/*동백버스*/
+.dongbaekbus .dongbaekbus-text ul li h2{
+  font-size: 3.6rem;
+}
+.dongbaekbus .dongbaekbus-text ul li.bus01{
+  width: 320px;
+  justify-content: space-between;
+  align-items: center;
+}
+.dongbaekbus .dongbaekbus-text ul li.bus01 img{
+  width: 80px;
+  height: 80px;
+}
+.dongbaekbus .dongbaekbus-text ul li .bus-bg01::before{
+  background: linear-gradient(to right, rgba(228,30,31,1) 0%,rgba(228,30,31,0) 100%);
+}
+.dongbaekbus .dongbaekbus-text ul li .bus-bg02::before{
+  background: linear-gradient(to right, rgba(51,51,51,1) 0%,rgba(51,51,51,0) 100%);
+}
+.dongbaekbus .dongbaekbus-text ul li .bus-bg03::before{
+  background: linear-gradient(to right, rgba(2,141,208,1) 0%,rgba(2,141,208,0.02) 98%,rgba(2,141,208,0) 100%);
+}
+.dongbaekbus .dongbaekbus-bg02{
+  width: 700px;
+  background: url(../img/dongbaekbus/busticket.png) no-repeat center left / contain;
+  position: relative;
+}
+.dongbaekbus .dongbaekbus-bg02 .tape02{
+  width: 160px;
+  position: absolute;
+  top: 100px;
+  left: 300px;
+}
+.dongbaekbus .dongbaekbus-bg02 .tape02 img{
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+.dongbaekbus .dongbaekbus-bg02 .busdesign{
+  width: 500px;
+  display: flex;
+  position: absolute;
+  gap: 8px;
+  top: 180px;
+  left: 130px;
+}
+.dongbaekbus .dongbaekbus-bg02 .busdesign li{
+  height: 140px;
+}
+.dongbaekbus .dongbaekbus-bg02 .busdesign li img{
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+.dongbaekbus .a-box{
+  position: absolute;
+  top: 300px;
+  left: 550px;
+}
+/*논개*/
+.nongae .nongae-text ul li{
+  margin-bottom: 10px;
+}
+ 
+.nongae .nongae01 img{
+  width: 160px;
+  object-fit: contain;
+}
+.nongae .nongae02 .font-list{
+  display: flex;
+  flex-wrap: wrap;
+  width: 300px;
+  gap: 10px 20px;
+}
+.nongae .nongae-text ul li .color-bg::before{
+  opacity: 0.6;
+}
+.nongae .nongae-text ul li .nongae-bg01::before{
+  background: linear-gradient(to right, rgba(63,82,98,1) 0%,rgba(63,82,98,0) 100%);
+}
+.nongae .nongae-text ul li .nongae-bg02::before{
+  background: linear-gradient(to right, rgba(51,51,51,1) 0%,rgba(51,51,51,0) 100%);
+}
+.nongae .nongae-text ul li .nongae-bg03::before{
+  background: linear-gradient(to right, rgba(245,157,35,1) 0%,rgba(245,157,35,0) 100%);
+}
+.nongae .nongae-bg02 .nongaedesign{
+  position: relative;
+}
+.nongae .nongae-bg02 .nongaedesign li:first-child{
+  position: absolute;
+  top: 100px;
+  width: 300px;
+}
+.nongae .nongae-bg02 .nongaedesign li:first-child img{
+  width: 100%;
+}
+.nongae .nongae-bg02 .nongaedesign li:last-child{
+  position: absolute;
+  top: 100px;
+  left: 250px;
+  height: 360px;
+  z-index: 900;
+}
+.nongae .nongae-bg02 .nongaedesign li:last-child img{
+  height: 100%;
+}
+.nongae .nongae-bg02 .tape01{
+  width: 100px;
+  height: 200px;
+  position: absolute;
+  top: 50px;
+  left: 550px;
+}
+.nongae .nongae-bg02 .tape01 img{
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+.nongae .leafet{
+  width: 500px;
+  height: 1000px;
+  overflow: hidden;
+  position: relative;
+}
+.nongae .leafet li:first-child{
+  position: absolute;
+  top: 100px;
+  left: 0;
+  width: 300px;
+  z-index: 1250;
+}
+.nongae .leafet li:first-child img{
+  width: 100%;
+  object-fit: contain;
+}
+.nongae .leafet li:last-child{
+  position: absolute;
+  top: 100px;
+  left: 100px;
+  width: 200px;
+  z-index: 1200;
+}
+.nongae .leafet li:last-child img{
+  width: 100%;
+  object-fit: contain;
+}
+.nongae > .tape01{
+  position: absolute;
+  top: 230px;
+  left: 50px;
+  width: 100px;
+  height: 200px;
+  z-index: 2000;
+}
+.nongae > .tape01 img{
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+.nongae .a-box{
+  position: absolute;
+  top: 200px;
+  left: 950px;
+  z-index: 800;
+}
+
+
+/*세븐일레븐*/
+.seveneleven .seven01{
+  position: relative;
+}
+.seveneleven .seven01 img{
+  display: block;
+  width: 300px;
+  position: absolute;
+  top: -50px;
+  left: -20px;
+}
+.seveneleven .seven01 h2{
+  position: absolute;
+  top: 30px;
+  left: 180px;
+  white-space: nowrap;
+}
+
+.seveneleven .seven02{
+  margin-top: 70px;
+}
+.seveneleven .seven02 .font-list{
+  display: flex;
+  flex-wrap: wrap;
+  width: 200px;
+  gap: 10px 20px;
+}
+.seveneleven .seveneleven-text ul li .color-list{
+  display: flex;
+  flex-wrap: wrap;
+  width: 300px;
+  gap: 10px 40px;
+}
+.seveneleven .seveneleven-text ul li .color-bg::before{
+  width: 100px;
+  height: 30px;
+}
+
+.seveneleven .seveneleven-text ul li .color-bg::before{
+  opacity: 0.6;
+}
+.seveneleven .seveneleven-text ul li .seven-bg01::before{
+  background: linear-gradient(to right, rgba(71,80,89,1) 0%,rgba(71,80,89,0.99) 1%,rgba(71,80,89,0.2) 100%);
+}
+.seveneleven .seveneleven-text ul li .seven-bg02::before{
+  background: linear-gradient(to right, rgba(3,130,109,1) 0%,rgba(3,130,109,0.99) 1%,rgba(3,130,109,0.2) 100%);
+}
+.seveneleven .seveneleven-text ul li .seven-bg03::before{
+  background: linear-gradient(to right, rgba(252,119,50,1) 0%,rgba(252,119,50,0.99) 1%,rgba(252,119,50,0.2) 100%);
+}
+.seveneleven .seveneleven-text ul li .seven-bg04::before{
+  background: linear-gradient(to right, rgba(202,31,49,1) 0%,rgba(202,31,49,0.99) 1%,rgba(202,31,49,0.2) 100%);
+}
+.seveneleven .seveneleven-bg02{
+  position: relative;
+}
+.seveneleven .seveneleven-bg02 .flyer{
+  width: 600px;
+  position: absolute;
+  top: 30px;
+  left: -50px;
+  z-index: 3000;
+}
+.seveneleven .seveneleven-bg02 .flyer img{
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+
+
+
+/*테렌즈*/
+.terenz .terenz01{
+  display: flex;
+  gap: 20px;
+}
+.terenz .terenz01 img{
+  width: 200px;
+}
+
+
+.terenz .terenz02 .font-list{
+  display: flex;
+  flex-wrap: wrap;
+  width: 200px;
+  gap: 10px 20px;
+}
+.terenz .terenz-text ul li .color-list{
+  display: flex;
+  flex-wrap: wrap;
+  width: 300px;
+  gap: 10px 40px;
+}
+.terenz .terenz-text ul li .color-bg::before{
+  width: 100px;
+  height: 30px;
+}
+.terenz .terenz-text ul li .color-bg{
+  margin-bottom: 0;
+}
+.terenz .terenz-text ul li .color-bg::before{
+  opacity: 0.6;
+}
+.terenz .terenz-text ul li .terenz-bg01::before{
+  background: linear-gradient(to right, rgba(57,199,231,1) 0%,rgba(57,199,231,0.2) 100%);
+}
+.terenz .terenz-text ul li .terenz-bg02::before{
+  background: linear-gradient(to right, rgba(209,228,186,1) 0%,rgba(105,199,231,1) 100%);
+}
+.terenz .terenz-text ul li .terenz-bg03::before{
+  background: linear-gradient(to right, rgba(54,112,145,1) 0%,rgba(54,112,145,0.99) 1%,rgba(54,112,145,0.3) 100%);
+}
+.terenz .terenz-text ul li .terenz-bg04::before{
+  background: linear-gradient(to right, rgba(181,216,227,1) 0%,rgba(105,199,231,1) 100%);
+}
+.terenz .terenz-text ul li .terenz-bg05::before{
+  background: linear-gradient(to right, rgba(4,72,111,1) 0%,rgba(4,72,111,0.99) 0%,rgba(4,72,111,0.3) 100%); 
+}
+.terenz .terenz-text ul li .terenz-bg06::before{
+  background: linear-gradient(to right, rgba(67,129,164,1) 0%,rgba(4,72,111,1) 100%);
+}
+.terenz .terenz-bg02 .terenz-video{
+  position: absolute;
+  top: 120px;
+  width: 500px;
+  height: 300px;
+}
+.terenz .terenz-bg02 .terenz-video video{
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+.terenz .a-box{
+  top: 200px;
+  left: 950px;
+}
+/*라이프마인드*/
+.lifemind .life01 img{
+  width: 200px;
+  object-fit: contain;
+}
+.lifemind .life01 h2{
+  white-space: nowrap;
+}
+
+.lifemind .lifemind-text ul li .color-list{
+  display: flex;
+  flex-wrap: wrap;
+  width: 300px;
+  gap: 10px 40px;
+}
+.lifemind .lifemind-text ul li .color-bg::before{
+  width: 100px;
+  height: 30px;
+}
+
+.lifemind .lifemind-text ul li .color-bg::before{
+  opacity: 0.6;
+}
+.lifemind .lifemind-text ul li .life-bg01::before{
+  background: linear-gradient(to right, rgba(91,156,255,1) 0%,rgba(91,156,255,0.99) 1%,rgba(4,72,111,0) 100%);
+}
+.lifemind .lifemind-text ul li .life-bg02::before{
+  background: linear-gradient(to right, rgba(32,121,255,1) 0%,rgba(32,121,255,0.99) 1%,rgba(32,121,255,0) 100%); 
+}
+.lifemind .lifemind-text ul li .life-bg03::before{
+  background: linear-gradient(to right, rgba(51,51,51,1) 0%,rgba(51,51,51,0) 100%);
+}
+.lifemind .lifemind-text ul li .life-bg04::before{
+  background: linear-gradient(to right, rgba(246,250,253,1) 0%,rgba(246,250,253,0.8) 100%);
+}
+.lifemind .lifemind-text ul li .life-bg05::before{
+  background: linear-gradient(to right, rgba(239,248,255,1) 0%,rgba(239,248,255,0.8) 100%);
+}
+.lifemind .cont-tit{
+  z-index: 3000;
+}
+.lifemind .lifemind-bottom{
+  z-index: 2900;
+}
+.lifemind .lifemind-bg02{
+  width: 500px;
+  position: absolute;
+  top: 0;
+  left: 500px;
+  z-index: 2600;
+}
+.lifemind .lifemind-bg02 img{
+  width: 100%;
+  object-fit: contain;
+}
+.lifemind .a-box{
+  position: absolute;
+}
+/*마지막*/
